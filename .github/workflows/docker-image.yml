@@ -87,5 +87,5 @@ jobs:
           script: |
             echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker pull ${{ env.REGISTRY }}/${{ env.REPO }}:${{ github.sha }}
-            docker rm -f saledress.app | true 
-            docker run -d -p 12580:80 --name saledress.app ${{ env.REGISTRY }}/${{ env.REPO }}:${{ github.sha }}
+            docker rm -f vue-pure-admin | true 
+            docker run -d -p 12580:80 --name vue-pure-admin ${{ env.REGISTRY }}/${{ env.REPO }}:${{ github.sha }}
